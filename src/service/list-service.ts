@@ -22,6 +22,22 @@ export const getList = async (id: string) => {
   }
 };
 
-export const postList = async (input: Prisma.ListUpdateInput) => {};
+export const postList = async (input: { text: string }) => {
+  try {
+    const result = await prisma.list.create({ data: input });
+    return result;
+  } catch (error) {
+    console.log(error);
+    throw new GraphQLError("Error posting list");
+  }
+};
 
-export const deleteList = async (id: string) => {};
+export const deleteList = async (id: string) => {
+  try {
+    const result = await prisma.list.delete({ where: { id } });
+    return result;
+  } catch (error) {
+    console.log(error);
+    throw new GraphQLError("Error deleting list");
+  }
+};
