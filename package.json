@@ -17,10 +17,8 @@
     "graphql-tools-merge-typedefs": "^2.0.1",
     "nanoid": "^5.0.7",
     "next": "14.2.3",
-    "prisma": "^5.15.0",
     "react": "^18",
-    "react-dom": "^18",
-    "todo-list": "."
+    "react-dom": "^18"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -30,6 +28,7 @@
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
     "postcss": "^8",
+    "prisma": "^5.15.0",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }

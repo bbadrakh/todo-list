@@ -1,5 +1,4 @@
 import { prisma } from "@/utils/prisma";
-import { Prisma } from "@prisma/client";
 import { GraphQLError } from "graphql";
 
 export const getLists = async () => {

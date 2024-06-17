@@ -1,20 +1,7 @@
 import { startServerAndCreateNextHandler } from "@as-integrations/next";
 import { ApolloServer } from "@apollo/server";
-import { start } from "repl";
-
-// The GraphQL schema
-const typeDefs = `#graphql
-  type Query {
-    hello: String
-  }
-`;
-
-// A map of functions which return data for the schema.
-const resolvers = {
-  Query: {
-    hello: () => "world",
-  },
-};
+import { typeDefs } from "@/graphql/schemas";
+import { resolvers } from "@/graphql/resolvers";
 
 const server = new ApolloServer({
   typeDefs,

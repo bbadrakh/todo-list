@@ -10,10 +10,10 @@ export const listTypeDefs = gql`
   }
   type Query {
     getLists: [List!]
-    getList: (id: ID!): List!
+    getList(id: ID!): List!
   }
   type Mutation {
-    postList: (id: ID!): List!
-    deleteList: (input: ListCreateInput!): List!
+    deleteList(id: ID!): List!
+    postList(input: ListCreateInput!): List!
   }
 `;
